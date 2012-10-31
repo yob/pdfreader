@@ -1,0 +1,25 @@
+= pdfreader for Go
+
+This is a partly functional go library for extracting data from PDFs. It was
+originally available at http://code.google.com/p/pdfreader/. I'm not taking
+over maintainence, I'm just experimenting with go.
+
+= Installation
+
+    go get -d github.com/yob/pdfreader
+
+= Building
+
+    go install github.com/yob/pdfreader/pdtosvg
+    go install github.com/yob/pdfreader/pdstream
+    go install github.com/yob/pdfreader/tt1
+    go install github.com/yob/pdfreader/pdserve
+    go install github.com/yob/pdfreader/pdtest
+
+= Usage
+
+    ./bin/pdtosvg foo.pdf
+    ./bin/pdstream foo.pdf "9 0 R"
+    ./bin/tt1 foo.pdf
+    ./bin/pdserve foo.pdf && curl http://127.0.0.1:12345/hello
+    ./bin/pdtest foo.pdf
